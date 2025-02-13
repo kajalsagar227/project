@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            /* position: relative; */
+        }
+
+        header {
+            height: 7%;
+            width: 100%;
+            box-shadow: 0 0 4px gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            background-color: white;
+
+        }
+
+        header>button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: cursive;
+            font-size: 1.2rem;
+            margin-left: 7%;
+        }
+
+        .allbutton {
+            height: 50%;
+            width: 15%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-right: 10%;
+
+        }
+
+        .allbutton>button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: rgb(95, 95, 95);
+        }
+
+        .allbutton>button:hover {
+            color: black;
+        }
+
+        .section1 {
+            height: 50%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #F8F9FA;
+            gap: 9%;
+
+        }
+
+        .section1>h1 {
+            font-size: 3.5rem;
+            color: #212529;
+            font-family: sans-serif;
+        }
+
+        .section1>h3 {
+            font-weight: normal;
+            color: #212529;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section2 {
+            height: 100%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 110px;
+        }
+
+        .story {
+            height: 50%;
+            width: 35%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: self-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 9%;
+
+        }
+
+        .story>h1 {
+            font-size: 2.5rem;
+            color: #212529;
+            font-family: sans-serif;
+        }
+
+        .story>h3 {
+            font-weight: normal;
+            color: #212529;
+            font-family: sans-serif;
+            line-height: 30px;
+        }
+
+        .story>p {
+            width: 110%;
+            color: #212529;
+            font-family: sans-serif;
+            line-height: 25px;
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        .section3 {
+            height: 60%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #F8F9FA;
+            gap: 9%;
+
+        }
+
+        .all {
+            height: 50%;
+            width: 90%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 80px;
+        }
+
+        .section3>h1 {
+            font-size: 3.5rem;
+            font-family: sans-serif
+        }
+
+        .all>.secc1,
+        .secc2,
+        .secc3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .all>.secc1>h2,
+        .secc2>h2,
+        .secc3>h2 {
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+
+        .all>.secc1>h3,
+        .secc2>h3,
+        .secc3>h3 {
+            font-family: sans-serif;
+            font-weight: normal;
+            color: rgb(95, 95, 95);
+        }
+
+        .section5 {
+            height: 10%;
+            width: 100%;
+            background-color: white;
+        }
+
+        .section6 {
+            height: 368px;
+            width: 100%;
+            background-color: #212529;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1%;
+        }
+
+        .footer {
+            height: 70%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid; */
+            margin-left: 10%;
+        }
+
+        .section6>.footer>.foot3 {
+            height: 35%;
+            width: 23%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: -5%;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .section6>.footer>.foot1,
+        .foot4 {
+            height: 28%;
+            width: 23%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: -6%;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .section6>.footer>.foot2 {
+            height: 60%;
+            width: 20%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            color: white;
+            font-family: sans-serif;
+
+        }
+
+        .section6>.footer>.foot1>h3,
+        .footer>.foot2>h3,
+        .footer>.foot3>h3,
+        .footer>.foot4>h3 {
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
+        .section6>.footer>.foot1>h2,
+        .footer>.foot2>h2,
+        .footer>.foot3>h2,
+        .footer>.foot4>h2 {
+            /* font-size: 1rem; */
+            font-weight: lighter;
+        }
+
+        .ff {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 35%;
+            /* border: 1px solid; */
+        }
+
+        hr {
+            width: 83%;
+        }
+
+        h3 {
+            color: white;
+            font-family: sans-serif;
+            font-weight: lighter;
+            font-size: 1.5rcap;
+        }
+        .fa {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+        @media screen and (max-width: 767px) {
+            .fa {
+                display: block;
+            }
+
+            .allbutton {
+            height: 100%;
+            width: 130%;
+            /* border: 1px solid; */
+            display: block;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20%;   
+            margin-left: -1%;
+            visibility: hidden;
+            background-color: white;
+
+        }
+
+            .allbutton>button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: sans-serif;
+                font-size: 1rem;
+                color: rgb(95, 95, 95);
+            }
+
+            .allbutton>button:hover {
+                color: black;
+            }
+            .section6 {
+                    height: 110%;
+                    width: 100%;
+                    background-color: #212529;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10%;
+                }
+
+                .footer {
+                    height: 80%;
+                    width: 100%;
+                    display: flex;
+                    align-items: self-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    /* border: 1px solid white; */
+                    /* margin-left: 10%; */
+                    gap: 7%;
+
+                }
+
+                .section6>.footer>.foot3 {
+                    height: 45%;
+                    width: 45%;
+                    /* border: 1px solid white; */
+                    display: flex;
+                    align-items: self-start;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    margin-top: -5%;
+                    color: white;
+                    font-family: sans-serif;
+                }
+
+                .section6>.footer>.foot1,
+                .foot4 {
+                    height: 45%;
+                    width: 45%;
+                    /* border: 1px solid white; */
+                    display: flex;
+                    align-items: self-start;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    margin-top: 6%;
+                    color: white;
+                    font-family: sans-serif;
+                }
+
+                .section6>.footer>.foot2 {
+                    height: 60%;
+                    width: 45%;
+                    /* border: 1px solid white; */
+                    display: flex;
+                    align-items: self-start;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    color: white;
+                    font-family: sans-serif;
+
+                }
+
+                .section6>.footer>.foot1>h3,
+                .footer>.foot2>h3,
+                .footer>.foot3>h3,
+                .footer>.foot4>h3 {
+                    font-size: 1rem;
+                    font-weight: lighter;
+                }
+
+                .section6>.footer>.foot1>h2,
+                .footer>.foot2>h2,
+                .footer>.foot3>h2,
+                .footer>.foot4>h2 {
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                }
+
+                .ff {
+                    height: 10%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 35%;
+                    /* border: 1px solid; */
+                }
+
+                hr {
+                    width: 83%;
+                }
+
+                h3 {
+                    color: white;
+                    font-family: sans-serif;
+                    font-weight: lighter;
+                    font-size: 1.5rcap;
+                }
+
+
+            }
+        
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="Cbm()">CBM IT SERVICE</button>
+        <div class="allbutton">
+            <button onclick="ToFile()">About</button>
+            <button onclick="ToService()">Services</button>
+            <button onclick="ToContact()">Contact</button>
+        </div>
+        <i class="fa fa-bars" onclick="chg()"></i>
+    </header>
+    <div class="section1">
+
+        <h1>About CBM IT Services</h1>
+        <h3>Pioneering digital solutions in web, mobile, and digital marketing.</h3>
+
+    </div>
+    <div class="section2">
+        <div class="story">
+
+            <h1>Our Story</h1>
+            <h3>CBM IT Services has been at the forefront of digital innovation, helping businesses transform their
+                ideas into successful digital solutions.</h3>
+            <p>From humble beginnings as a startup ourselves, we've grown into a full-service digital agency serving
+                clients. Our team of 10+ experts combines technical excellence with business acumen to deliver
+                measurable results.</p>
+
+        </div>
+        <img src="C:\Users\Kajal\Downloads\ourteam.jpg" alt="">
+
+    </div>
+    <div class="section3">
+        <h1>Our Core Values</h1>
+        <div class="all">
+            <div class="secc1">
+                <h2>Innovation</h2>
+                <h3>Pushing boundaries with cutting-edge solutions</h3>
+            </div>
+            <div class="secc2">
+                <h2>Integrity</h2>
+                <h3>Ethical practices & transparent communication</h3>
+            </div>
+            <div class="secc3">
+
+                <h2>Impact</h2>
+                <h3>Delivering measurable business results</h3>
+            </div>
+        </div>
+    </div>
+    <div class="section5"></div>
+    <div class="section6">
+        <div class="footer">
+            <div class="foot1">
+                <h2>CBM IT Services</h2>
+                <h3>Transforming ideas into digital reality</h3>
+            </div>
+
+            <div class="foot2">
+                <h2>Services</h2>
+                <h3>Web Development</h3>
+                <h3>Mobile Apps</h3>
+                <h3>E-commerce</h3>
+                <h3>SEO & Marketing</h3>
+            </div>
+            <div class="foot3">
+                <h2>Contact</h2>
+                <h3>info@cbmitservices.com</h3>
+                <h3>Delhi, India</h3>
+            </div>
+            <div class="foot4">
+                <h2>Follow Us</h2>
+                <h3>LinkedIn
+                    Twitter
+                    Facebook</h3>
+            </div>
+        </div>
+        <div class="ff">
+            <hr>
+            <h3>© 2023 CBM IT Services. All rights reserved.</h3>
+        </div>
+    </div>
+    <script>
+        function ToFile() {
+            window.location.href = 'aboutPage.html';
+        }
+
+        function ToService() {
+            window.location.href = 'servicesPage.html';
+        }
+        function ToContact() {
+            window.location.href = 'contactPage.html';
+        }
+        function Cbm() {
+            window.location.href = 'index.html';
+        }
+        var num = 0;
+        var icon = document.querySelector(".fa");
+        var nav = document.querySelector(".allbutton");
+
+        function chg() {
+            if (num == 0) {
+                nav.style.visibility = "visible";
+                num = 1;
+            } else {
+                nav.style.visibility = "hidden";
+
+
+                num = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
