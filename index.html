@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            /* position: relative; */
+        }
+
+        header {
+            height: 7%;
+            width: 100%;
+            box-shadow: 0 0 4px gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            background-color: white;
+
+        }
+
+        header>button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: cursive;
+            font-size: 1.2rem;
+            margin-left: 7%;
+        }
+
+        .allbutton {
+            height: 50%;
+            width: 15%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-right: 10%;
+            /* visibility: visible; */
+
+        }
+
+        .allbutton>button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: rgb(95, 95, 95);
+        }
+
+        .allbutton>button:hover {
+            color: black;
+        }
+
+        .section1 {
+            height: 65%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #F8F9FA;
+            gap: 9%;
+
+        }
+
+        .section1>h1 {
+            font-size: 3.5rem;
+            color: #212529;
+            font-family: sans-serif;
+        }
+
+        .para {
+            height: 15%;
+            width: 70%;
+            /* border: 1px solid; */
+            color: #4a4d51;
+            font-family: sans-serif;
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-top: -1%;
+
+        }
+
+        .para>.p1 {
+            margin-top: 1%;
+            margin-left: 37%;
+            font-weight: normal;
+            color: #4a4d51;
+        }
+
+        .section1>button {
+            height: 47.6px;
+            width: 265px;
+            border-radius: 20px;
+            background-color: #0D6EFD;
+            text-decoration: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .section2 {
+            height: 75%;
+            width: 100%;
+
+        }
+
+        .sec1 {
+            height: 20%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .sec2 {
+            height: 40%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sec3 {
+            height: 40%;
+            width: 100%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sec1>h1 {
+            font-size: 3rem;
+            color: #212529;
+            font-family: sans-serif;
+        }
+
+        .sec2>.s1,
+        .s2,
+        .s3 {
+            height: 193.61px;
+            width: 410px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            box-shadow: 0px 1px 0px rgb(240, 236, 236);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: sans-serif;
+            color: #212529;
+            gap: 15px;
+
+
+        }
+
+        .sec2>.s1>p {
+            width: 90%;
+            text-align: center;
+            color: #212529BF;
+        }
+
+        .sec2>.s1>h2,
+        .s2>h2,
+        .s3>h2 {
+            font-weight: lighter;
+        }
+
+        .sec2>.s2>p {
+            width: 90%;
+            text-align: center;
+            color: #212529BF;
+        }
+
+        .sec2>.s3>p {
+            width: 90%;
+            text-align: center;
+            color: #212529BF;
+        }
+
+        .sec3>.ss1,
+        .ss2,
+        .ss3 {
+            height: 193.61px;
+            width: 410px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            box-shadow: 0px 1px 0px rgb(240, 236, 236);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: sans-serif;
+            color: #212529;
+            gap: 15px;
+
+        }
+
+        .sec3>.ss1>h2,
+        .ss2>h2,
+        .ss3>h2 {
+            font-weight: lighter;
+        }
+
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .arrow {
+            margin-left: 3px;
+            font-size: 20px;
+
+        }
+
+        .section3 {
+            height: 285px;
+            width: 100%;
+            background-color: #F8F9FA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .section3>.s33,
+        .s34,
+        .s35 {
+            height: 193.61px;
+            width: 410px;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            box-shadow: 0px 1px 0px rgb(240, 236, 236);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: sans-serif;
+            color: #212529;
+            gap: 15px;
+
+        }
+
+        .section4 {
+            height: 300px;
+            width: 100%;
+            background-color: #0D6EFD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .section4>h1 {
+            font-size: 3rem;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+
+        .section4>h2 {
+            font-size: 1.3rem;
+            color: white;
+            font-family: sans-serif;
+            font-weight: lighter;
+
+        }
+
+        .two {
+            height: 20%;
+            width: 40%;
+            /* border: 1px solid; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .but1 {
+            height: 45px;
+            width: 310px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.3rem;
+        }
+
+        .but1:hover {
+            background-color: rgb(230, 221, 221);
+            cursor: pointer;
+        }
+
+        .but2 {
+            height: 45px;
+            width: 228px;
+            border-radius: 30px;
+            border: 1px solid white;
+            font-size: 1.3rem;
+            background-color: transparent;
+            color: white;
+        }
+
+        .but2:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .section5 {
+            height: 10%;
+            width: 100%;
+            background-color: white;
+        }
+
+        .section6 {
+            height: 368px;
+            width: 100%;
+            background-color: #212529;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1%;
+        }
+
+        .footer {
+            height: 70%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid; */
+            margin-left: 10%;
+        }
+
+        .section6>.footer>.foot3 {
+            height: 35%;
+            width: 23%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: -5%;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .section6>.footer>.foot1,
+        .foot4 {
+            height: 28%;
+            width: 23%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: -6%;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .section6>.footer>.foot2 {
+            height: 60%;
+            width: 20%;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: self-start;
+            justify-content: space-around;
+            flex-direction: column;
+            color: white;
+            font-family: sans-serif;
+
+        }
+
+        .section6>.footer>.foot1>h3,
+        .footer>.foot2>h3,
+        .footer>.foot3>h3,
+        .footer>.foot4>h3 {
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
+        .section6>.footer>.foot1>h2,
+        .footer>.foot2>h2,
+        .footer>.foot3>h2,
+        .footer>.foot4>h2 {
+            /* font-size: 1rem; */
+            font-weight: lighter;
+        }
+
+        .ff {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 35%;
+            /* border: 1px solid; */
+        }
+
+        hr {
+            width: 83%;
+        }
+
+        h3 {
+            color: white;
+            font-family: sans-serif;
+            font-weight: lighter;
+            font-size: 1.5rcap;
+        }
+
+        .fa {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            header {
+                height: 7%;
+                width: 100%;
+                box-shadow: 0 0 4px gray;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: fixed;
+                flex-direction: row;
+                background-color: white;
+
+            }
+
+            header>button {
+                text-align: center;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: cursive;
+                font-size: 1rem;
+                margin-left: 7%;
+
+            }
+
+            .fa {
+                display: block;
+            }
+
+            .allbutton {
+                height: 100%;
+                width: 100%;
+                /* border: 1px solid; */
+                display: block;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 20%;
+                visibility: hidden;
+                background-color: white;
+
+            }
+
+            .allbutton>button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-family: sans-serif;
+                font-size: 1rem;
+                color: rgb(95, 95, 95);
+            }
+
+            .allbutton>button:hover {
+                color: black;
+            }
+
+            .section1 {
+                height: 70%;
+                padding: 5px;
+                gap: 6%;
+                
+            }
+
+
+            .section1>h1 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            .para {
+                font-size: 1.1rem;
+                width: 90%;
+                line-height: 25px;
+                margin-top: 0;
+            }
+
+            .para>.p1 {
+                margin-top: -5.8%;
+                margin-left: -5%;
+                text-align: center;
+            }
+
+            .section1>button {
+                width: 60%;
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .section2 {
+                height: 160%;
+                padding: 15px;
+            }
+
+            .sec1 {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 4%;
+            }
+
+            .sec1>h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .sec2,
+            .sec3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 1%;
+                margin-top: 10%;
+            }
+
+            .sec2>.s1,
+            .sec2>.s2,
+            .sec2>.s3,
+            .sec3>.ss1,
+            .sec3>.ss2,
+            .sec3>.ss3 {
+                width: 100%;
+                height: 33%;
+                margin-bottom: -20%;
+
+                .sec2>.s1>p,
+                .sec2>.s2>p,
+                .sec2>.s3>p {
+                    width: 90%;
+                    text-align: center;
+                }
+
+                .sec2>.s1>h2,
+                .sec2>.s2>h2,
+                .sec2>.s3>h2 {
+                    font-size: 1rem;
+                    
+                }
+
+                .sec3>.ss1>h2,
+                .sec3>.ss2>h2,
+                .sec3>.ss3>h2 {
+                    font-size: 1rem;
+                }
+
+                .learn-more {
+                    font-size: 14px;
+                }
+
+                .arrow {
+                    font-size: 18px;
+                }
+            }
+
+            .section3 {
+                height: 100%;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                /* border: 1px solid; */
+            }
+
+            .section3>.s33,
+            .s34,
+            .s35 {
+                background-color: white;
+                width: 100%;
+                height: 25%;
+
+            }
+
+            .section4 {
+                height: 350px;
+                width: 100%;
+                background-color: #0D6EFD;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .section4>h1 {
+                font-size: 2.3rem;
+                color: white;
+                font-family: sans-serif;
+                font-weight: bolder;
+                text-align: center;
+            }
+
+            .section4>h2 {
+                font-size: 1.3rem;
+                color: white;
+                font-family: sans-serif;
+                font-weight: lighter;
+
+            }
+
+            .two {
+                height: 20%;
+                width: 80%;
+                /* border: 1px solid; */
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 2%;
+            }
+
+            .but1 {
+                height: 60px;
+                width: 310px;
+                border-radius: 30px;
+                border: none;
+                font-size: 1rem;
+            }
+
+            .but1:hover {
+                background-color: rgb(230, 221, 221);
+                cursor: pointer;
+            }
+
+            .but2 {
+                height: 60px;
+                width: 228px;
+                border-radius: 30px;
+                border: 1px solid white;
+                font-size: 1.3rem;
+                background-color: transparent;
+                color: white;
+            }
+
+            .but2:hover {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+
+            .section6 {
+                height: 110%;
+                width: 100%;
+                background-color: #212529;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10%;
+            }
+
+            .footer {
+                height: 80%;
+                width: 100%;
+                display: flex;
+                align-items: self-start;
+                justify-content: center;
+                flex-direction: column;
+                /* border: 1px solid white; */
+                /* margin-left: 10%; */
+                gap: 7%;
+
+            }
+
+            .section6>.footer>.foot3 {
+                height: 45%;
+                width: 45%;
+                /* border: 1px solid white; */
+                display: flex;
+                align-items: self-start;
+                justify-content: space-around;
+                flex-direction: column;
+                margin-top: -5%;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            .section6>.footer>.foot1,
+            .foot4 {
+                height: 45%;
+                width: 45%;
+                /* border: 1px solid white; */
+                display: flex;
+                align-items: self-start;
+                justify-content: space-around;
+                flex-direction: column;
+                margin-top: 6%;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            .section6>.footer>.foot2 {
+                height: 60%;
+                width: 45%;
+                /* border: 1px solid white; */
+                display: flex;
+                align-items: self-start;
+                justify-content: space-around;
+                flex-direction: column;
+                color: white;
+                font-family: sans-serif;
+
+            }
+
+            .section6>.footer>.foot1>h3,
+            .footer>.foot2>h3,
+            .footer>.foot3>h3,
+            .footer>.foot4>h3 {
+                font-size: 1rem;
+                font-weight: lighter;
+            }
+
+            .section6>.footer>.foot1>h2,
+            .footer>.foot2>h2,
+            .footer>.foot3>h2,
+            .footer>.foot4>h2 {
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
+
+            .ff {
+                height: 10%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 35%;
+                /* border: 1px solid; */
+            }
+
+            hr {
+                width: 83%;
+            }
+
+            h3 {
+                color: white;
+                font-family: sans-serif;
+                font-weight: lighter;
+                font-size: 1.5rcap;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="Cbm()">CBM IT SERVICE</button>
+        <div class="allbutton">
+            <button onclick="ToFile()">About</button>
+            <button onclick="ToService()">Services</button>
+            <button onclick="ToContact()">Contact</button>
+        </div>
+
+
+        <i class="fa fa-bars" onclick="chg()"></i>
+
+    </header>
+    <hr>
+    <div class="section1">
+
+        <h1>Empowering Your Digital Success</h1>
+        <div class="para">
+            <p>Comprehensive IT solutions for web, mobile, e-commerce, and digital marketing.Your trusted partner in
+                digital </p>
+            <p class="p1">transformation and startup growth.</p>
+        </div>
+        <button>Start Your Project</button>
+    </div>
+    <div class="section2">
+        <div class="sec1">
+            <h1>Our Services</h1>
+        </div>
+        <div class="sec2">
+            <div class="s1">
+                <h2>Web Developement</h2>
+                <p>Custom websites that drive results and engage audiences</p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="s2">
+                <h2>Mobile Apps</h2>
+                <p>Native and cross-platform mobile solutions</p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="s3">
+                <h2>E-commerce</h2>
+                <p>Scalable online stores with seamless payment integration</p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+        <div class="sec3">
+            <div class="ss1">
+                <h2>SEO & Marketing</h2>
+                <p>Data-driven strategies to boost online visibility</p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="ss2">
+                <h2>Startup Solutions</h2>
+                <p>End-to-end technical partnership for startups</p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+
+            </div>
+            <div class="ss3">
+                <h2>IT Consulting</h2>
+                <p>Strategic technology planning and implementation
+
+                </p>
+                <a href="#" class="learn-more">
+                    Learn More
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="s33">
+            <a href="#" class="learn-more">
+                <h1>10</h1>
+                <span class="arrow">
+                    <h1>+</h1>
+                </span>
+            </a>
+            <h2>Years Experience</h2>
+            <p>Digital transformation expertise</p>
+
+        </div>
+        <div class="s34">
+            <a href="#" class="learn-more">
+                <h1>50</h1>
+                <span class="arrow">
+                    <h1>+</h1>
+                </span>
+            </a>
+            <h2>Projects Delivered</h2>
+            <p>Successful implementations</p>
+
+        </div>
+        <div class="s35">
+            <a href="#" class="learn-more">
+                <h1>24/7</h1>
+                <span class="arrow">
+                    <h1>+</h1>
+                </span>
+            </a>
+            <h2>Support</h2>
+            <p>Technical assistance </p>
+
+        </div>
+    </div>
+    <div class="section4">
+
+        <h1>Ready to Transform Your Business?</h1>
+        <h2>Let's discuss your digital transformation journey</h2>
+        <div class="two">
+            <button class="but1">Schedule Consultation</button>
+            <button class="but2">View Portfolio</button>
+        </div>
+    </div>
+    <div class="section5"></div>
+    <div class="section6">
+        <div class="footer">
+            <div class="foot1">
+                <h2>CBM IT Services</h2>
+                <h3>Transforming ideas into digital reality</h3>
+            </div>
+            <div class="foot2">
+                <h2>Services</h2>
+                <h3>Web Development</h3>
+                <h3>Mobile Apps</h3>
+                <h3>E-commerce</h3>
+                <h3>SEO & Marketing</h3>
+            </div>
+            <div class="foot3">
+                <h2>Contact</h2>
+                <h3>info@cbmitservices.com</h3>
+                <h3>Delhi, India</h3>
+            </div>
+            <div class="foot4">
+                <h2>Follow Us</h2>
+                <h3>LinkedIn
+                    Twitter
+                    Facebook</h3>
+            </div>
+        </div>
+        <div class="ff">
+            <hr>
+            <h3>© 2023 CBM IT Services. All rights reserved.</h3>
+        </div>
+    </div>
+    <script>
+        function ToFile() {
+            window.location.href = 'aboutPage.html';
+        }
+
+        function ToService() {
+            window.location.href = 'servicesPage.html';
+        }
+        function ToContact() {
+            window.location.href = 'contactPage.html';
+        }
+        function Cbm() {
+            s
+            window.location.href = 'index.html';
+        }
+        var num = 0;
+        var icon = document.querySelector(".fa");
+        var nav = document.querySelector(".allbutton");
+
+        function chg() {
+            if (num == 0) {
+                nav.style.visibility = "visible";
+
+
+                num = 1;
+            } else {
+                nav.style.visibility = "hidden";
+
+
+                num = 0;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
